@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS - Multiple Instance</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app1">
+        <h1>{{title}}</h1>
+        <p>{{name}}</p>
+        <button @click="changeOne">Change 2</button>
+    </div>
+    <hr>
+    <div id="app2">
+        <h1>{{title}}</h1>
+        <p>{{name}}</p>
+        <button @click="changeTwo">Change 1</button>
+    </div>
+    <script src="multiple-instance.js"></script>
+</body>
+</html>

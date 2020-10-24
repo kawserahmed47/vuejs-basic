@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js - Conditional Rendering</title>
+
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <p  v-if="checkUser()">Verified</p>
+        <p v-else>You are not verified</p>
+
+        <hr>
+                <p v-text="name" v-show="checkUser()"></p>
+                <p v-text="age" v-show="checkUser()"></p>
+                <p v-text="conditionalAge" v-show="checkUser()"></p>
+                <hr>
+                <p v-if="age>conditionalAge" v-show="checkUser()">You are adult</p>
+                <p v-else-if="conditionalAge==age" v-show="checkUser()">You are on year</p>
+                <p v-else v-show="checkUser()">You are not adult</p>
+    </div>
+    <script src="conditional.js"></script>
+</body>
+</html>

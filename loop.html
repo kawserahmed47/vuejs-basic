@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js - Loop</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+
+
+        <h1>{{title}}</h1>
+        <p>{{name}} </p>
+        <p>{{smartphones}}</p>
+
+
+        <hr>
+        <p v-for="(phone, index) in smartphones">
+          {{index}} :  {{phone}}
+        </p>
+
+
+        <hr>
+        <p>{{student}}</p>
+        <p>{{student.name}}</p>
+        <p v-for="(value,key,index) in student">
+            {{index}} : {{key}} : {{value}}
+        </p>
+
+
+        <hr>
+        <p v-once>{{name}}</p>
+            {{update()}}
+
+        <hr>
+        <p v-for="n in 10">
+            {{n}}
+        </p>
+
+        
+
+
+    </div>
+    
+    <script src="loop.js"></script>
+</body>
+</html>

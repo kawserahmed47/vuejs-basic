@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js - Directive</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <p>Normally: {{name}}</p>
+        <p>Using Directive:</p>
+        <p v-text="name"></p>
+
+        <img height="400" width="600" v-bind:src="src" v-bind:alt="alt">
+        <hr>
+        <a v-bind:href="link">{{linkName}}</a>
+        <hr>
+        <p v-text="myHTML"></p>
+        <p v-html="myHTML"></p>
+    </div>
+    <script src="directive.js"></script>
+</body>
+</html>

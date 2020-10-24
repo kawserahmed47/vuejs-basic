@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS - Event</title>
+    <script src="vue.js"></script>
+
+    <style>
+        .box{
+            height: 400px;
+            width:  400px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <p v-text="name"></p>
+
+        <button v-on:click="updateName">Click Me</button>
+
+        <hr>
+        <p>X : {{x}}</p>
+        <p>X : {{y}}</p>
+        <div class="box" v-on:mousemove="getCord" >
+
+        </div>
+
+        
+
+    </div>
+    
+    <script src="event.js"></script>
+</body>
+</html>
