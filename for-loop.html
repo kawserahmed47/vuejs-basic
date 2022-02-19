@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Fundamental Exercise - Foor Loop </title>
+    <script src="https://unpkg.com/vue@3"></script>
+   
+</head>
+<body>
+    <div id="app">
+        <h1>{{message}}</h1>
+
+       <ol>
+           <li v-for="name in names">{{name}}</li>
+       </ol>
+
+       <ul>
+           <li v-for="fruit in fruits">Name: {{fruit.name}} Color: {{fruit.color}}</li>
+       </ul>
+    
+        
+    </div>
+    <script>
+        Vue.createApp({
+              data() {
+                return {
+                    message: " Foor Loop",
+                    names: ['Kawser', 'Shishir', 'Bashir', 'Chanchal'],
+                    fruits:[
+                        {name:"Mango", color:"Yellow", weight:200},
+                        {name:"Orange", color:"Orange", weight:40},
+                        {name:"Apple", color:"Red", weight:100},
+                    ]
+                }
+              }, 
+
+              methods:{
+                
+                
+              }
+            
+          }).mount('#app')
+
+  </script>
+</body>
+</html>

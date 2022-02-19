@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Fundamental Exercise - Event Object </title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        .canvas{
+            height: 240px;
+            width: 240px;
+            margin-top: 20px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{message}}</h1>
+        <button @click="me" >Click Here</button>
+        <div class="canvas" @mousemove="over" >
+            {{log.x}}, {{log.y}}
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+              data() {
+                return {
+                    message: "VueJs Event Object",
+                    log:{
+                        x:0,
+                        y:0
+                    }
+                }
+              }, 
+
+              methods:{
+                   me(event){
+                        console.log(event);
+                   },
+
+                   over(event){
+                        this.log.x = event.offsetX;
+                        this.log.y = event.offsetY;
+                   }
+              }
+            
+          }).mount('#app')
+
+  </script>
+</body>
+</html>
